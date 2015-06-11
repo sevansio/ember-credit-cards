@@ -6,7 +6,7 @@ var computed = Ember.computed;
 
 export default Ember.Component.extend({
   tagName: 'form',
-  classNames: ['credit-card-form'],
+  classNames: ['Form', 'Form--creditCard'],
   classNameBindings: ['isValid'],
   name: null,
   number: null,
@@ -15,6 +15,7 @@ export default Ember.Component.extend({
   cvc: null,
   zipcode: null,
   zipcodeRequired: false,
+  showType: false,
 
   isValid: computed.and('nameValid', 'numberValid', 'expirationValid', 'cvcValid', 'zipcodeValid'),
 
