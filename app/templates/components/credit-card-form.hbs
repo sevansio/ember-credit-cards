@@ -1,35 +1,36 @@
 <div class="clearfix">
-  <div {{bind-attr class="numberValid:has-success :form-group :cc-number"}}>
-    <label class="control-label">Card Number</label>
-    {{input-credit-card-number number=number class="form-control"}}
+  <div {{bind-attr class="numberValid:has-success :Form__group :cc-number"}}>
+    <label class="Form__controlLabel">Card Number</label>
+    {{input-credit-card-number number=number class="Form__control"}}
   </div>
 
-  <div {{bind-attr class="cvcValid:has-success :form-group :cc-cvc"}}>
-    <label class="control-label">Security Code</label>
-    {{input-credit-card-cvc cvc=cvc class="form-control"}}
+  <div {{bind-attr class="cvcValid:has-success :Form__group :cc-cvc"}}>
+    <label class="Form__controlLabel">Security Code</label>
+    {{input-credit-card-cvc cvc=cvc class="Form__control"}}
   </div>
 </div>
 
 <div class="clearfix">
-  <div {{bind-attr class="nameValid:has-success :form-group :cc-name"}}>
-    <label class="control-label">Name on Card</label>
-    {{input type="text" value=name class="form-control"}}
+  <div {{bind-attr class="nameValid:has-success :Form__group :cc-name"}}>
+    <label class="Form__controlLabel">Name on Card</label>
+    {{input type="text" value=name class="Form__control"}}
   </div>
 
-  <div {{bind-attr class="expirationValid:has-success :form-group :cc-expiration"}}>
-    <label class="control-label">Expiration</label>
-    {{input-credit-card-expiration month=month year=year class="form-control"}}
+  <div {{bind-attr class="expirationValid:has-success :Form__group :cc-expiration"}}>
+    <label class="Form__controlLabel">Expiration</label>
+    {{input-credit-card-expiration month=month year=year class="Form__control"}}
   </div>
 </div>
 
 {{#if zipcodeRequired}}
-  <div {{bind-attr class="zipcodeValid:has-success :form-group :cc-expiration"}}>
-    <label class="control-label">Zip Code</label>
-    {{input-credit-card-zipcode zipcode=zipcode class="form-control"}}
+  <div {{bind-attr class="zipcodeValid:has-success :Form__group :cc-expiration"}}>
+    <label class="Form__controlLabel">Zip Code</label>
+    {{input-credit-card-zipcode zipcode=zipcode class="Form__control"}}
   </div>
 {{/if}}
 
-
-<div class="type">
-  {{type}}
-</div>
+{{#if showType}}
+  <div class="type">
+    {{type}}
+  </div>
+{{/if}}
